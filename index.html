@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Reaper's Website</title>
+	<title>Will You Be My Girlfriend?</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<style>
 		body {
 			margin: 0;
 			padding: 0;
-			background-color: #1b1b1b;
+			background-color: #ff9f9f;
 			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 			color: #fff;
 		}
@@ -30,22 +30,73 @@
 			margin-top: 30px;
 			margin-bottom: 30px;
 		}
-		.discord {
+		.options {
+			display: flex;
+			flex-direction: row;
+			justify-content: center;
+			align-items: center;
+		}
+		.option {
+			margin: 20px;
+			padding: 20px;
+			background-color: #ff2400;
+			border: none;
+			border-radius: 50px;
+			font-size: 24px;
+			font-weight: bold;
+			cursor: pointer;
+			transition: all 0.3s ease;
+		}
+		.option:hover {
+			transform: scale(1.1);
+			background-color: #ff5400;
+		}
+		.love {
+			text-align: center;
+			font-size: 48px;
+			font-weight: bold;
+			margin-top: 50px;
+			margin-bottom: 20px;
+			color: #ff2400;
+		}
+		.no {
 			text-align: center;
 			font-size: 24px;
 			font-weight: bold;
-			margin-bottom: 50px;
+			margin-top: 30px;
+			margin-bottom: 30px;
 		}
-		.discord span {
+		.no span {
 			color: #ff2400;
+			font-weight: bold;
 		}
 	</style>
 </head>
 <body>
 	<div class="container">
-		<h1 hi, I'm Reaper</h1>
-		<div class="intro">Welcome to my website!</div>
-		<div class="discord">My Discord is <span>Reaper#7898</span></div>
+		<h1>Will You Be My Girlfriend?</h1>
+		<div class="intro">Click on one of the options below:</div>
+		<div class="options">
+			<button class="option" id="yes">Yes</button>
+			<button class="option" id="no">No</button>
+		</div>
+		<div class="love" id="love" style="display: none;">&#10084;&#65039;</div>
+		<div class="no" id="no-response" style="display: none;">Erm, <span>you're not very nice</span> 😔</div>
 	</div>
-</body>
-</html>
+	<script>
+		const yesBtn = document.getElementById('yes');
+		const noBtn = document.getElementById('no');
+		const love = document.getElementById('love');
+		const noResponse = document.getElementById('no-response');
+
+		yesBtn.addEventListener('click', function() {
+			love.style.display = 'block';
+			noResponse.style.display = 'none';
+		});
+
+		noBtn.addEventListener('click', function() {
+			noResponse.style.display = 'block';
+			love.style.display = 'none';
+		});
+	</script>
+</body
