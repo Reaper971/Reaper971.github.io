@@ -1,102 +1,70 @@
 <!DOCTYPE html>
 <html>
-<head>
-	<title>Will You Be My Girlfriend?</title>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<style>
-		body {
-			margin: 0;
-			padding: 0;
-			background-color: #ff9f9f;
-			font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-			color: #fff;
-		}
-		.container {
-			max-width: 800px;
-			margin: 0 auto;
-			padding: 20px;
-		}
-		h1 {
-			text-align: center;
-			font-size: 48px;
-			font-weight: bold;
-			margin-top: 50px;
-			margin-bottom: 20px;
-		}
-		.intro {
-			text-align: center;
-			font-size: 24px;
-			font-weight: bold;
-			margin-top: 30px;
-			margin-bottom: 30px;
-		}
-		.options {
-			display: flex;
-			flex-direction: row;
-			justify-content: center;
-			align-items: center;
-		}
-		.option {
-			margin: 20px;
-			padding: 20px;
-			background-color: #ff2400;
-			border: none;
-			border-radius: 50px;
-			font-size: 24px;
-			font-weight: bold;
-			cursor: pointer;
-			transition: all 0.3s ease;
-		}
-		.option:hover {
-			transform: scale(1.1);
-			background-color: #ff5400;
-		}
-		.love {
-			text-align: center;
-			font-size: 48px;
-			font-weight: bold;
-			margin-top: 50px;
-			margin-bottom: 20px;
-			color: #ff2400;
-		}
-		.no {
-			text-align: center;
-			font-size: 24px;
-			font-weight: bold;
-			margin-top: 30px;
-			margin-bottom: 30px;
-		}
-		.no span {
-			color: #ff2400;
-			font-weight: bold;
-		}
-	</style>
-</head>
-<body>
-	<div class="container">
-		<h1>Will You Be My Girlfriend?</h1>
-		<div class="intro">Click on one of the options below:</div>
-		<div class="options">
-			<button class="option" id="yes">Yes</button>
-			<button class="option" id="no">No</button>
-		</div>
-		<div class="love" id="love" style="display: none;">&#10084;&#65039;</div>
-		<div class="no" id="no-response" style="display: none;">Erm, <span>you're not very nice</span> 😔</div>
-	</div>
-	<script>
-		const yesBtn = document.getElementById('yes');
-		const noBtn = document.getElementById('no');
-		const love = document.getElementById('love');
-		const noResponse = document.getElementById('no-response');
+  <head>
+    <title>Will You Be My Girlfriend?</title>
+    <style>
+      body {
+        background-color: #f9c2c9;
+        background-image: linear-gradient(315deg, #f9c2c9 0%, #fe909d 74%);
+        font-family: Arial, sans-serif;
+        color: #4a154b;
+      }
 
-		yesBtn.addEventListener('click', function() {
-			love.style.display = 'block';
-			noResponse.style.display = 'none';
-		});
+      h1 {
+        text-align: center;
+        font-size: 3rem;
+        margin-top: 3rem;
+      }
 
-		noBtn.addEventListener('click', function() {
-			noResponse.style.display = 'block';
-			love.style.display = 'none';
-		});
-	</script>
-</body
+      form {
+        text-align: center;
+        margin-top: 3rem;
+      }
+
+      input[type="submit"] {
+        background-color: #fe346e;
+        color: white;
+        border: none;
+        border-radius: 10px;
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #ff7bbd;
+      }
+
+      .response {
+        text-align: center;
+        font-size: 1.5rem;
+        margin-top: 3rem;
+      }
+
+      .response-yes {
+        color: #ff5b90;
+        font-size: 2rem;
+      }
+
+      .response-no {
+        color: #ff5b90;
+        font-size: 1.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Will You Be My Girlfriend?</h1>
+    <form action="mailto:crystalcormant22@gmail.com" method="post" enctype="text/plain">
+      <input type="submit" name="answer" value="Yes">
+      <input type="submit" name="answer" value="No">
+    </form>
+    <div class="response">
+      <p class="response-yes">Yay! Please enter your name:</p>
+      <form action="mailto:crystalcormant22@gmail.com" method="post" enctype="text/plain">
+        <input type="text" name="name">
+        <input type="submit" value="Submit">
+      </form>
+      <p class="response-no">Erm, you're not very nice :(</p>
+    </div>
+  </body>
+</html>
